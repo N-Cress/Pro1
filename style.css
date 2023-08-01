@@ -22,6 +22,7 @@ p{
     font-size: 16px;
 }
 
+
 li {
     list-style-type: none;
 }
@@ -128,7 +129,8 @@ nav {
 .about-me__photo{
     width: 100%;
     transform: scale(1.5);
-    padding-top: 8px;
+    padding-bottom: 64px;
+    padding-right: 4px;
 }
 
 .about_me__info--title {
@@ -233,6 +235,13 @@ nav {
 }
 
 /* Project */
+.project {
+    margin-bottom: 128px;
+}
+
+.project:last-child {
+    margin-bottom: 40px;
+}
 
 .project__wrapper {
     display: flex;
@@ -266,7 +275,107 @@ nav {
     cursor: pointer;
 }
 
-.project:hover .project__img{
+.project:hover .project__img {
     transform: scale(1.05);
     filter: blur(1px);
+}
+
+.project:hover .project__description {
+    opacity: 1;
+    transform: translateY(-50%);
+}
+
+.project__list {
+    padding-top: 40px;
+}
+
+.project__description {
+    position: absolute;
+    top: 50%;
+    left: 90px;
+    max-width: 550px;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 300ms, transform 450ms;
+}
+
+.project__description--para {
+    margin: 16px 0;
+}
+
+.project__description--title {
+    font-size: 40px;
+}
+
+.project__description--link {
+    font-size: 20px;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+.project__description--title,
+.project__description--sub-title,
+.project__description--para,
+.project__description--link {
+    text-align: left;
+    color: #fff;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #242424;
+}
+
+.footer__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6% 0;
+    width: 100%;
+    
+}
+
+
+.footer__logo--img {
+    width: 70px;
+    height: 70px;
+}
+
+.footer__social--link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer__logo {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.footer__social--list {
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__logo--text {
+    text-decoration: none;
+    color: #fff;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 300ms, transform 500ms;
+}
+
+.footer__logo:hover .footer__logo--text {
+    opacity: 1;
+    transform: translateX(150%);
+}
+
+.fa-arrow-up {
+    text-decoration: none;
 }
